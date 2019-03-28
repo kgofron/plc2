@@ -1,0 +1,25 @@
+record(ao, "$(Chan)TSet-SP") {
+    field(DESC, "Zone temperature set point control")
+    field(SCAN, "Passive")
+    field(DTYP, "EtherIP")
+    field(PREC, "$(PREC=2)")
+    field(OUT,  "@$(PLC) $(Mod=T)_SP$(Seq=_1)[$(ArrNum)] S 1")
+    field(ASLO, "$(ASLO=1)")
+    field(EGU,  "$(EGU=C)")
+    field(AOFF, "$(AOFF=0)")
+    field(HOPR, "$(HOPR=24.44444)")
+    field(LOPR, "$(LOPR=18.33333)")
+#    field(ASG,  "TCTEXPERT")
+    info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "$(Chan)TSet-RB") {
+    field(DESC, "Zone temperature set point readback")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "EtherIP")
+    field(INP,  "@$(PLC) $(Mod=T)_SP$(Seq=_1)[$(ArrNum)] S 1")
+    field(ASLO, "$(ASLO=1)")
+    field(EGU,  "$(EGU=C)")
+    field(AOFF, "$(AOFF=0)")
+    field(PREC, "$(PREC=2)")
+}

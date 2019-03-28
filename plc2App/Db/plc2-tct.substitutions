@@ -1,0 +1,43 @@
+# This sample template serves as an example of how to write substitutions for this IOC.
+# In this example, there are three zones. Each zone has one heater and three thermocouples.
+#
+# plc2-vout:
+#     For monitoring voltage output from the controller to the heater
+# plc2-sp:
+#     For setting and reading the temperature setpoint in a zone
+# plc2-tc:
+#     For monitoring the temperature of the thermocouples in each zone
+#
+
+file plc2-vout.template
+{
+pattern
+{Chan,                        Mod,    Seq,    ArrNum }
+{"Beamline-TCT{Heater:1}",    "V",    _1,     "0" }
+{"Beamline-TCT{Heater:2}",    "V",    _1,     "1" }
+{"Beamline-TCT{Heater:3}",    "V",    _1,     "2" }
+}
+
+file plc2-sp.template
+{
+pattern
+{Chan,                      Mod,    Seq,    ArrNum }
+{"Beamline-TCT{Zone:1}",    "T",    _1,     "0" }
+{"Beamline-TCT{Zone:2}",    "T",    _1,     "1" }
+{"Beamline-TCT{Zone:3}",    "T",    _1,     "2" }
+}
+
+file plc2-tc.template
+{
+pattern
+{Chan,                         Mod,    Seq,    ArrNum }
+{"Beamline-TCT{Zone:1}T:1",    "T",    _1,     "0" }
+{"Beamline-TCT{Zone:1}T:2",    "T",    _1,     "1" }
+{"Beamline-TCT{Zone:1}T:3",    "T",    _1,     "2" }
+{"Beamline-TCT{Zone:2}T:1",    "T",    _1,     "3" }
+{"Beamline-TCT{Zone:2}T:2",    "T",    _1,     "4" }
+{"Beamline-TCT{Zone:2}T:3",    "T",    _1,     "5" }
+{"Beamline-TCT{Zone:3}T:1",    "T",    _1,     "6" }
+{"Beamline-TCT{Zone:3}T:2",    "T",    _1,     "7" }
+{"Beamline-TCT{Zone:3}T:3",    "T",    _1,     "8" }
+}

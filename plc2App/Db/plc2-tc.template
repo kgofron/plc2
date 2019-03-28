@@ -1,0 +1,11 @@
+record(ai, "$(Chan)-I") {
+    field(DESC, "Temperature indicator, degC")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "EtherIP")
+    field(INP,  "@$(PLC) $(Mod=T)_I$(Seq=_1)[$(ArrNum)] S 1")
+    field(PREC, "$(PREC=2)")
+    field(ASLO, "$(ASLO=1)")
+    field(EGU,  "$(EGU=C)")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+}
