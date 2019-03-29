@@ -3,7 +3,7 @@ record(ai,"$(Chan)Vout-I") {
     field(SCAN, "I/O Intr")
     field(DTYP, "EtherIP")
     field(INP,  "@$(PLC) $(Mod=V)_I$(Seq=_1)[$(ArrNum)] S 1")
-    field(ASLO, "$(ASLO=0.1)")
+    field(ASLO, "$(ASLO=1)")
     field(EGU,  "$(EGU=V)")
     field(AOFF, "$(AOFF=0)")
     field(PREC, "$(PREC=3)")
