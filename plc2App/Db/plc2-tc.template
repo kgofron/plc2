@@ -8,4 +8,5 @@ record(ai, "$(Chan)-I") {
     field(EGU,  "$(EGU=C)")
     field(HHSV, "MAJOR")
     field(HSV,  "MINOR")
+    info(autosaveFields_pass0, "HIGH HIHI")
 }
