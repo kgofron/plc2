@@ -7,4 +7,5 @@ record(ai,"$(Chan)Vout-I") {
     field(EGU,  "$(EGU=V)")
     field(AOFF, "$(AOFF=0)")
     field(PREC, "$(PREC=3)")
+    field(ADEL, "$(ADEL=0.01)")
 }

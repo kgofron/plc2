@@ -6,6 +6,7 @@ record(ai, "$(Chan)-I") {
     field(PREC, "$(PREC=2)")
     field(ASLO, "$(ASLO=1)")
     field(EGU,  "$(EGU=C)")
+    field(ADEL, "$(ADEL=0.01)")
     field(HHSV, "MAJOR")
     field(HSV,  "MINOR")
     info(autosaveFields_pass0, "HIGH HIHI")
